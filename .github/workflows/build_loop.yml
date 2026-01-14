@@ -14,6 +14,6 @@ jobs:
         uses: loopkit/project-action@main
         with:
           gh_pat: ${{secrets.GH_PAT }}
-          fastlane_key_id: ${{secrets.FASTLANE_KEY_ID }}
-          fastlane_issuer_id: ${{secrets.FASTLANE_ISSUER_ID }}
-          fastlane_key_content: ${{secrets.FASTLANE_KEY_CONTENT }}
+          fastlane_key_id: ${{secrets.FASTLANE_KEY_ID}}
+          fastlane_issuer_id: ${{secrets.FASTLANE_ISSUER_ID}}
+          fastlane_key_content: ${{secrets.FASTLANE_KEY_CONTENT}}
