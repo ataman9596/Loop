@@ -1,19 +1,14 @@
 name: Build Loop
-
 on:
   workflow_dispatch:
-
 jobs:
   build:
     runs-on: macos-latest
     steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v4
-
-      - name: Build Loop
-        uses: loopkit/project-action@main
+      - uses: actions/checkout@v4
+      - uses: loopkit/project-action@main
         with:
-          gh_pat: ${{secrets.GH_PAT }}
-          fastlane_key_id: ${{secrets.FASTLANE_KEY_ID}}
-          fastlane_issuer_id: ${{secrets.FASTLANE_ISSUER_ID}}
-          fastlane_key_content: ${{secrets.FASTLANE_KEY_CONTENT}}
+          gh_pat: ${{ secrets.GH_PAT }}
+          fastlane_key_id: ${{ secrets.FASTLANE_KEY_ID }}
+          fastlane_issuer_id: ${{ secrets.FASTLANE_ISSUER_ID }}
+          fastlane_key_content: ${{ secrets.FASTLANE_KEY_CONTENT }}
